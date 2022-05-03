@@ -1,0 +1,5 @@
+grpc:
+  client:
+    is-even-service:
+      address: static://localhost:8082
+      negotiationType: plaintext

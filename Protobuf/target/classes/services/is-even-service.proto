@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package proto.services;
+
+option java_multiple_files = true;
+option java_package = "com.alifsaddid.proto.services";
+
+import "requests/even-number-request.proto";
+import "responses/even-number-response.proto";
+
+service IsEvenService {
+
+    rpc checkIsEvenUnary(proto.requests.EvenNumberRequest) returns (proto.responses.EvenNumberResponse);
+
+    rpc checkIsEvenBidirectionalStream(stream proto.requests.EvenNumberRequest) returns (stream proto.responses.EvenNumberResponse);
+
+}

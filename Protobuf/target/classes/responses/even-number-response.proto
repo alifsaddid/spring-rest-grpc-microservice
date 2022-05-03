@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package proto.responses;
+
+option java_multiple_files = true;
+option java_package = "com.alifsaddid.proto.responses";
+
+message EvenNumberResponse {
+    int32 number = 1;
+    bool isEven = 2;
+}
